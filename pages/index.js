@@ -50,11 +50,7 @@ const Banner = ({
         <br />
         {description2}
       </Text>
-      <Button
-        fontSize="xl"
-        bg="blue.300"
-        color="white"
-      >
+      <Button fontSize="xl">
         <Link href={linkName}>{buttonText}</Link>
       </Button>
     </Box>
@@ -63,8 +59,7 @@ const Banner = ({
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <Box>
       <Banner
         purpose="RENT YOUR NEXT HOME"
         title1="Rental homes for"
@@ -75,6 +70,7 @@ export default function Home() {
         linkName="/search?purpose=for-rent"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
       />
+      <Flex flexWrap="wrap">{/* Fetch properties & map over them */}</Flex>
       <Banner
         purpose="BUY YOUR NEXT HOME"
         title1="Find, Buy, & Own Your"
@@ -85,6 +81,6 @@ export default function Home() {
         linkName="/search?purpose=for-rent"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
       />
-    </div>
+    </Box>
   );
 }
